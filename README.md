@@ -1,5 +1,7 @@
 # Student Management Portal (Angular 19)
 
+Website live at: https://satyamkukreja321.github.io/student-dashboard-angular19/
+
 A modern, single-page application (SPA) built for a machine test evaluation. This project manages student registrations using a split-screen interface with a Material Form and a Data Table.
 
 ## 🚀 Features
