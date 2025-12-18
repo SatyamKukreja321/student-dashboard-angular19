@@ -1,0 +1,140 @@
+/* 1. Base Layout */
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 30px;
+  background-color: #f5f7fa; /* Light grey background for professional look */
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 2. Form Section (Left Side) */
+.form-card {
+  flex: 0 0 400px; /* Fixed width for the form */
+  height: fit-content;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  background: #ffffff;
+}
+
+mat-card-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+mat-card-title {
+  color: #3f51b5;
+  font-weight: 600 !important;
+  font-size: 1.4rem !important;
+}
+
+/* 3. Form Internal Styling */
+.student-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.radio-section {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-section label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+mat-radio-button {
+  margin-right: 15px;
+}
+
+mat-checkbox {
+  margin-bottom: 15px;
+}
+
+/* 4. Table Section (Right Side) */
+.table-container {
+  flex: 1; /* Takes up remaining space */
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.table-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 5. Material Table Enhancement */
+table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-mdc-header-cell {
+  background-color: #f8f9ff !important;
+  color: #3f51b5 !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.mat-mdc-row:hover {
+  background-color: #f1f3f9 !important;
+  transition: background-color 0.2s ease;
+}
+
+/* 6. Buttons & Actions */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 8px 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+/* 7. Responsive Design (Mobile View) */
+@media (max-width: 1024px) {
+  .main-layout {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .form-card {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto; /* Enable scroll for small screens */
+  }
+}

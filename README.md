@@ -1,59 +1,23 @@
-# StudentDashboardAngular19
+# Student Management Portal (Angular 19)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+A modern, single-page application (SPA) built for a machine test evaluation. This project manages student registrations using a split-screen interface with a Material Form and a Data Table.
 
-## Development server
+## 🚀 Features
+- **Modern State Management:** Uses Angular 19 **Signals** for reactive data flow.
+- **Persistence:** Integrated **Local Storage** to retain data on page refresh.
+- **Material UI:** Includes Autocomplete, Select, Radio, Checkboxes, and Dividers.
+- **Full CRUD:** Capability to Add, Edit, and Delete student records.
+- **Responsive Design:** Optimized for Desktop and Tablet views.
 
-To start a local development server, run:
+## 🛠️ Tech Stack
+- **Framework:** Angular 19 (Standalone Components)
+- **UI Library:** Angular Material
+- **Logic:** TypeScript, Reactive Forms
+- **Styling:** CSS3 (Flexbox/Grid)
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📦 Installation & Setup
+1. Clone the repository or extract the ZIP file.
+2. Open terminal in the project folder.
+3. Install dependencies:
+   ```bash
+   npm install
