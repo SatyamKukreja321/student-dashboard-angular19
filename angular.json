@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/student-management-angular19/",
+            "baseHref": "/student-dashboard-angular19/",
             "outputPath": "dist/student-dashboard-angular19",
             "index": "src/index.html",
             "browser": "src/main.ts",
