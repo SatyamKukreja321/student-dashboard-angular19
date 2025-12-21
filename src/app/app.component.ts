@@ -1,9 +1,8 @@
-import { Component, inject, signal, effect } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,7 +20,6 @@ import { MatDividerModule } from '@angular/material/divider';
     ReactiveFormsModule,
     MatCardModule,
     MatInputModule,
-    MatSelectModule,
     MatRadioModule,
     MatCheckboxModule,
     MatAutocompleteModule,
@@ -80,6 +78,9 @@ export class AppComponent {
    * @param id - The unique identifier of the student.
    */
   onDelete(id: number) {
+    if (this.editingId() === id) {
+      this.resetForm();
+    }
     this.studentService.deleteStudent(id);
   }
 
@@ -90,5 +91,15 @@ export class AppComponent {
   resetForm() {
     this.editingId.set(null);
     this.studentForm.reset({ gender: 'Male', hobbies: false });
+  }
+
+  /**
+   * TrackBy function for Angular Material table rows.
+   * @param index - The index of the current row (provided by Angular).
+   * @param student - The current Student object representing the table row.
+   * @returns The unique identifier of the student used for tracking rows.
+   */
+  trackById(index: number, student: Student): number {
+    return student.id!;
   }
 }
